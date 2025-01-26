@@ -70,7 +70,6 @@ struct _ZoomImageView<CloseButtonStyle: ButtonStyle>: View {
                                     aspectRatio: uiImage.size.aspectRatio
                                 )
                         )
-                        .gesture(zoomState == ZoomState.min ? dragImageGesture : nil)
                         .onChange(of: isDragging, perform: { isDragging in
                             if !isDragging {
                                 onDragEnded(predictedEndTranslation: predictedOffset)
